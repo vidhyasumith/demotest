@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+<div class="container">
+        <h2 style="text-align:center">Registration</h2>
+    <form action="register" method="post">
+        {% csrf_token %}
+        <div class="block" align="center">
+        <label><b>First name</b></label><br>
+        <input type="text" name="first_name" placeholder="Enter your first name"><br>
+
+        <label><b>Email</b></label><br>
+        <input type="email" name="email"  pattern="''+@''+.com" placeholder="Enter your mail id"><br>
+
+        <label><b>Phone Number</b></label><br>
+        <input type="number"  name="number"  maxlength="{10}" placeholder="Enter the phone number"><br>
+        <br>
+        <input type="button" value="submit" onsubmit="button">
+        </div>
+    </form>
+</div>
+</body>
+</html>
